@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{943C6BC9-D852-434C-ACCE-61011FF00B4A}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>Status92.Tools</RootNamespace>
+        <AssemblyName>Status92</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <LangVersion>9</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Microsoft.CSharp" />
+        <Reference Include="Sirenix.Serialization">
+          <HintPath>..\Dependencies\Sirenix.Serialization.dll</HintPath>
+        </Reference>
+        <Reference Include="Sirenix.Utilities">
+          <HintPath>..\Dependencies\Sirenix.Utilities.dll</HintPath>
+        </Reference>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Xml" />
+        <Reference Include="UnityEngine">
+            <HintPath>C:\Program Files\Unity\Hub\Editor\2022.1.5f1\Editor\Data\Managed\UnityEngine.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="ColorExtensions.cs" />
+        <Compile Include="FSM\Actor.cs" />
+        <Compile Include="FSM\IActor.cs" />
+        <Compile Include="FSM\IMachine.cs" />
+        <Compile Include="FSM\IState.cs" />
+        <Compile Include="FSM\Machine.cs" />
+        <Compile Include="FSM\RecordMachine.cs" />
+        <Compile Include="FSM\RecordState.cs" />
+        <Compile Include="FSM\State.cs" />
+        <Compile Include="GameObjectExtensions.cs" />
+        <Compile Include="Geometry\Polyline2D.cs" />
+        <Compile Include="Geometry\PolylineMeshGenerator.cs" />
+        <Compile Include="Input\S92Button.cs" />
+        <Compile Include="Input\S92CompoundButton.cs" />
+        <Compile Include="Input\S92DualAxis.cs" />
+        <Compile Include="Input\S92Input.cs" />
+        <Compile Include="Input\S92SingleAxis.cs" />
+        <Compile Include="Input\S92XAxis.cs" />
+        <Compile Include="Input\S92YAxis.cs" />
+        <Compile Include="LineRendererExtensions.cs" />
+        <Compile Include="LinqExtensions.cs" />
+        <Compile Include="MapSet.cs" />
+        <Compile Include="MeshExtensions.cs" />
+        <Compile Include="OnSceneSavedHandler.cs" />
+        <Compile Include="PolygonColliderFixer.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="RequiredByComponentAttribute.cs" />
+        <Compile Include="S92ScriptableObject.cs" />
+        <Compile Include="S92Singleton.cs" />
+        <Compile Include="S92SingletonScriptableObject.cs" />
+        <Compile Include="SafeAssetUtility.cs" />
+        <Compile Include="SceneExtensions.cs" />
+        <Compile Include="TransformExtensions.cs" />
+        <Compile Include="Triangulator.cs" />
+        <Compile Include="TypeUtils.cs" />
+        <Compile Include="VectorExtensions.cs" />
+        <Compile Include="WaitWhileDuration.cs" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>
